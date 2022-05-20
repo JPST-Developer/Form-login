@@ -1,6 +1,6 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useState } from "react";
-import api from "./services/api";
+import api from "../../services/api";
 
 function App() {
 
@@ -16,17 +16,20 @@ function App() {
             name,
             password
         }
-        
+
         try{
             const response = await api.post('/user/cadaster', data)
 
-            alert(`Seu ID de acesso: ${response.data.name}`)
-            console.log(response.data.name)
+            alert(`Cadastro feito com sucesso: ${response.data.user.name}`)
+            console.log(response.data)
         } catch (err) {
-            alert('Erro no cadastro, tente novamente. ' + data.name)
-            console.log(data)
+            alert(err.response.data.why)
+            console.log(err)
         }
+
     }
+
+  
 
     return (
         <div className="Register-container">
