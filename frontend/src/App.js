@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
+import Router from "./routes";
 
-
-import Router from "./routes"
+import "./styles/theme.css";
+import "./styles/index.css"
 
 function App() {
-  return (
-    <Router />
-  );
+  return <Router />;
 }
 
 export default App;
