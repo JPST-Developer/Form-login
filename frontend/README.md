@@ -1,4 +1,4 @@
-![screenshot](/src/images/screenshot.JPG)
+![screenshot](/frontend/src/images/screenshot.jpg)
 
 ## Built With
 
